@@ -10,12 +10,39 @@ window.angularjs = singleSpaAngular1.default({
   template: '<root />',
 });
 
-angular.module('main-module', []);
+angular.module('main-module', ['ui.router'])
+  .config(['$locationProvider', '$stateProvider', function ($locationProvider, $stateProvider) {
+    
+    $locationProvider.html5Mode(true);
 
-angular
-  .module('main-module')
+    $stateProvider
+      .state('home', {
+        url: '/',
+        views: {
+          "@": {
+            template: `Home`
+          }
+        },
+      })
+      .state('about', {
+        url: '/about',
+        views: {
+          "@": {
+            template: `About`
+          }
+        },
+      });
+  }])
   .component('root', {
-    template: '<div>Hello from angularjs!</div>',
+    template: `<div>
+      Hello from angularjs!
+      
+      <div>
+        <button ui-state="'home'">Home</button>
+        <button ui-state="'about'">About</button>
+      </div>
+      <div ui-view></div>
+    </div>`,
     controllerAs: 'vm',
     controller: function () {
       var vm = this;
