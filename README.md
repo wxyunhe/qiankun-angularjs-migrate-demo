@@ -1,24 +1,17 @@
-# vue-mainapp
+# demo
 
-## Project setup
-```
-npm install
-```
+这是一个使用 qiankun 支持的微前端应用demo
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+主应用：vue2
+子应用：vue2，angularjs
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 如何使用
 
-### Lints and fixes files
-```
-npm run lint
-```
+- 主应用 vue2：8080
+- 子应用 angularjs：7101
+- 子应用 vue2：7102
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 启动程序
+
+- 使用 pnpm 安装依赖
+- 执行 pnpm start 启动整个项目

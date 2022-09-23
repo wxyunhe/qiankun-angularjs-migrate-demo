@@ -1,23 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-
-    <main id="subapp-container">
-      <div id="subapp-container">
-        <div id="subapp-viewport"></div>
-      </div>
-    </main>
+    <div class="menu">
+      <button @click="navigateTo('#/angularjs')">angularjs</button>
+      <button @click="navigateTo('#/vue2')">vue2</button>
+    </div>
+    <div id="subapp-container">
+      <div id="subapp-viewport"></div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "App",
-  components: {
-    HelloWorld,
+  components: {},
+  methods: {
+    navigateTo(hash) {
+      window.location.hash = hash;
+    },
   },
 };
-</script>
+</script> 
+
+<style>
+body {
+  margin: 0;
+}
+</style>
+
+<style scoped>
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+#app .menu button {
+  font-size: large;
+}
+</style>

@@ -20,9 +20,6 @@ function genActiveRule(urlList) {
   };
 }
 
-function navigateTo(hash) {
-  window.location.hash = hash;
-}
 
 /**
 * Step2 注册子应用
@@ -80,10 +77,6 @@ setGlobalState({
   },
 });
 
-/**
- * Step3 设置默认进入的子应用
- */
-navigateTo('#/vue2');
 
 /**
  * Step4 启动应用
