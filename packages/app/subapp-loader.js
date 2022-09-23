@@ -12,7 +12,7 @@ function loader(loading) {
 function genActiveRule(urlList) {
   return (location) => {
     for (let url of urlList) {
-      if (location.hash === url) {
+      if (location.pathname.indexOf(url) === 0) {
         return true;
       }
     }
@@ -32,14 +32,14 @@ registerMicroApps(
       entry: '//localhost:7101',
       container: '#subapp-viewport',
       loader,
-      activeRule: genActiveRule(['#/angularjs']),
+      activeRule: genActiveRule(['/angularjs']),
     },
     {
       name: 'vue2',
       entry: '//localhost:7102',
       container: '#subapp-viewport',
       loader,
-      activeRule: genActiveRule(['#/vue2']),
+      activeRule: genActiveRule(['/vue2']),
     }
   ],
   {

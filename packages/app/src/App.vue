@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div class="menu">
-      <button @click="navigateTo('#/angularjs')">angularjs</button>
-      <button @click="navigateTo('#/vue2')">vue2</button>
+      <button @click="navigateTo('/angularjs')">angularjs</button>
+      <button @click="navigateTo('/vue2')">vue2</button>
     </div>
     <div id="subapp-container">
       <div id="subapp-viewport"></div>
@@ -16,7 +16,7 @@ export default {
   components: {},
   methods: {
     navigateTo(hash) {
-      window.location.hash = hash;
+      history.pushState(null, "", hash);
     },
   },
 };

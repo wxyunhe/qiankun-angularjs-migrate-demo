@@ -3,7 +3,6 @@ const pkg = require('./package.json');
 
 module.exports = defineConfig({
   transpileDependencies: true,
-
   devServer: {
     headers: {
       'Access-Control-Allow-Origin': '*',

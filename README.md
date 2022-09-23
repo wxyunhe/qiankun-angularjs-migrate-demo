@@ -2,10 +2,12 @@
 
 这是一个使用 qiankun 支持的微前端应用demo
 
-主应用：vue2
-子应用：vue2，angularjs
+- 主应用：vue2
+- 子应用：vue2，angularjs
 
 ## 如何使用
+
+### 端口
 
 - 主应用 vue2：8080
 - 子应用 angularjs：7101
