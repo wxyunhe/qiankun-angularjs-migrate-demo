@@ -1,6 +1,6 @@
 # demo
 
-- 一个使用 qiankun 支持的微前端应用 demo。
+一个使用 qiankun 支持的微前端应用 demo
 
 - 主应用 vue2
 - 子应用 angularjs + vue2
