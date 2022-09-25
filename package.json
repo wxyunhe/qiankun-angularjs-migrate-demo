@@ -1,6 +1,7 @@
 {
-  "name": "demo",
+  "name": "qiankun-angularjs-migrate-demo",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "main": "index.js",
   "dependencies": {},
