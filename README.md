@@ -8,7 +8,6 @@
 ## 启动整个项目
 
 - monorepo，使用 pnpm workspace 管理
-
 - 使用 pnpm 安装依赖
 - 执行 pnpm start 启动整个项目
 
